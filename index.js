@@ -107,6 +107,9 @@ const sanitizeInput = (input) => {
 };
 
 // -------------------------
+app.get("/healthcheck",(req,res)=>{
+res.send("work")
+})
 // Driver Application Endpoint
 // -------------------------
 app.post("/api/submit-application", limiter, upload.single("resume"), async (req, res) => {
